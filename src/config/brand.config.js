@@ -19,6 +19,22 @@ export const brandConfig = {
     socialPreviewImage: "/brand/social-preview.svg",
     twitterCard: "summary_large_image",
   },
+
+  navigation: [
+  {
+    label: "Explore Kim's Room",
+    href: "#resources",
+  },
+  {
+    label: "Get to know Kimberly",
+    href: "#about",
+  },
+  {
+    label: "Get a Date",
+    href: "#get-a-date",
+  },
+],
+
   hero: {
     eyebrow: "Lifestyle creator \u00b7 outdoors enthusiast",
     headline: "A little city sparkle, with room to roam.",

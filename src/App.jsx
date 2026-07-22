@@ -12,7 +12,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen overflow-x-hidden bg-canvas text-brand">
-      <SiteHeader brand={brandConfig.identity} />
+      <SiteHeader brand={brandConfig} />
       <main>
         <HeroSection brand={brandConfig} />
         <ResourceSection resources={brandConfig.resources} />
