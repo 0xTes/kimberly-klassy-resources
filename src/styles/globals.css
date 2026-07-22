@@ -1,61 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 @import "./theme.css";
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  min-width: 320px;
-
-  font-family: var(--font-sans);
-
-  background: var(--color-canvas);
-
-  color: var(--color-brand);
-
-  text-rendering: optimizeLegibility;
-
-  -webkit-font-smoothing: antialiased;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-img, 
-    picture {
-  display: block;
-  max-width: 100%;
-}
-
-button,
-a {
-  transition:
-    background-color var(--duration-normal) var(--ease-standard),
-    color var(--duration-normal) var(--ease-standard),
-    border-color var(--duration-normal) var(--ease-standard),
-    transform var(--duration-fast) var(--ease-standard);
-}
-
-:focus-visible {
-  outline: 3px solid var(--color-brand-accent);
-  outline-offset: 4px;
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation: none !important;
-    transition-duration: 0.01ms !important;
-  }
-
-}
+html { scroll-behavior: smooth; }
+body { min-width: 320px; margin: 0; font-family: var(--font-sans); text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; }
+*, *::before, *::after { box-sizing: border-box; }
+img, picture { display: block; max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--color-accent); outline-offset: 4px; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
