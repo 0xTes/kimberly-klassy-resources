@@ -100,6 +100,14 @@ export const brandConfig = {
     description: "Choose a corner of Kimberly's world and come say hello.",
     action: { label: "Explore all the links", href: "#resources" },
   },
+  newsletter: {
+  eyebrow: "Stay connected",
+  title: "Join Kimberly's newsletter.",
+  description:
+    "Get thoughtful updates, new adventures, exclusive creator content, and the occasional surprise delivered straight to your inbox.",
+  placeholder: "Enter your email address",
+  buttonLabel: "Subscribe",
+  },
   footer: {
     contact: { email: "", phone: "", address: "" },
     legalLinks: [],
