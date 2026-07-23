@@ -10,6 +10,11 @@ function createAnchorId(title) {
 
 export default function ResourceCard({ resource }) {
   const anchorId = createAnchorId(resource.title);
+  const isDisabled = !resource.href;
+
+  const actionClasses = `mt-6 inline-flex items-center gap-2 text-sm font-semibold underline-offset-4 ${
+    resource.featured ? "text-surface" : "text-brand"
+  }`;
 
   return (
     <article
@@ -68,23 +73,33 @@ export default function ResourceCard({ resource }) {
           {resource.description}
         </p>
 
-        <a
-          href={resource.href}
-          target="_blank"
-          rel="noreferrer"
-          className={`mt-6 inline-flex items-center gap-2 text-sm font-semibold underline-offset-4 hover:underline ${
-            resource.featured
-              ? "text-surface"
-              : "text-brand"
-          }`}
-        >
-          {resource.buttonLabel}
+        {isDisabled ? (
+          <span
+            aria-disabled="true"
+            className={`${actionClasses} cursor-not-allowed opacity-50`}
+          >
+            {resource.buttonLabel}
 
-          <Icon
-            name="arrow"
-            className="size-4"
-          />
-        </a>
+            <Icon
+              name="arrow"
+              className="size-4"
+            />
+          </span>
+        ) : (
+          <a
+            href={resource.href}
+            target="_blank"
+            rel="noreferrer"
+            className={`${actionClasses} hover:underline`}
+          >
+            {resource.buttonLabel}
+
+            <Icon
+              name="arrow"
+              className="size-4"
+            />
+          </a>
+        )}
       </div>
     </article>
   );
